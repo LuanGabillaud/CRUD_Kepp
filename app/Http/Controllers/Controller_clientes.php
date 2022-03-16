@@ -30,7 +30,7 @@ class Controller_clientes extends BaseController
             */
         public function create()
         {
-            //
+            return view('clientes_form');
         }
     
         /**
@@ -51,7 +51,8 @@ class Controller_clientes extends BaseController
             */
         public function show($id)
         {
-            //
+            $cliente = $id;
+            return view('cliente');
         }
     
         /**
@@ -62,7 +63,8 @@ class Controller_clientes extends BaseController
             */
         public function edit($id)
         {
-            //
+            $cliente = $id;
+            return view('cliente_form');
         }
     
         /**
@@ -73,7 +75,8 @@ class Controller_clientes extends BaseController
             */
         public function update($id)
         {
-            //
+            $cliente = $id;
+            return view('cliente');
         }
     
         /**
@@ -83,9 +86,11 @@ class Controller_clientes extends BaseController
             * @return Response
             */
         public function destroy($id)
-        {
-            //
-        }
+        {/**
+            $cliente = $id;
+            $cliente = delete();
+            return view('cliente');
+        */}
     
         
 }

@@ -20,8 +20,7 @@ class Controller_empresas extends BaseController
         */
         public function index()
         {
-            //retorna a página.
-            return view('empresas');
+           return view('empresas');
         }
     
         /**
@@ -31,7 +30,7 @@ class Controller_empresas extends BaseController
             */
         public function create()
         {
-            //
+            return view('empresas_form');
         }
     
         /**
@@ -41,7 +40,7 @@ class Controller_empresas extends BaseController
             */
         public function store()
         {
-            //
+           
         }
     
         /**
@@ -52,7 +51,7 @@ class Controller_empresas extends BaseController
             */
         public function show($id)
         {
-            //
+           
         }
     
         /**
@@ -63,7 +62,8 @@ class Controller_empresas extends BaseController
             */
         public function edit($id)
         {
-            //
+            $empresa = $id;
+            return view('empresa_form');
         }
     
         /**
@@ -74,7 +74,8 @@ class Controller_empresas extends BaseController
             */
         public function update($id)
         {
-            //
+            $empresa = $id;
+            return view('empresa_form');
         }
     
         /**
@@ -84,9 +85,11 @@ class Controller_empresas extends BaseController
             * @return Response
             */
         public function destroy($id)
-        {
-            //
-        }
+        {/**
+            $empresa = $id;
+            $empresa = delete();
+            return view('empresa');
+        */}
     
         
 }
