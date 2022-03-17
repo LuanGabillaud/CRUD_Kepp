@@ -21,6 +21,8 @@ class Empresas extends Migration
             $table->string('email');
             $table->string('telefone')->nullable();
             $table->string('endereco')->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('update_at')->nullable();
         });
     }
 
@@ -31,6 +33,6 @@ class Empresas extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('empresas');
     }
 }

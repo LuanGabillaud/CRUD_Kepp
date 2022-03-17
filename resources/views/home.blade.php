@@ -32,10 +32,13 @@
               <a class="nav-link" href="http://localhost/CRUD_Keep/public/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost/CRUD_Keep/public/clientes">Tabela de clientes</a>
+              <a class="nav-link" href="http://localhost/CRUD_Keep/public/clientes">Clientes Cadastrados.</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost/CRUD_Keep/public/empresas">Tabela de Empresas</a>
+              <a class="nav-link" href="http://localhost/CRUD_Keep/public/empresas">Empresas Cadastradas.</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost/CRUD_Keep/public/empresas">Membros Cadastrados.</a>
             </li>
           </ul>
                    
@@ -66,7 +69,7 @@
         <hr class="featurette-divider">        
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Para Empresas.<span class="text-muted">Crie o seu registro e veja os seus clientes.</span></h2>
+            <h2 class="featurette-heading">Para Empresas:<span class="text-muted">Crie o seu registro e veja os seus clientes.</span></h2>
             <p class="lead">Clique a baixo para acessar o formulario.</p><a class="btn btn-outline-secondary" href="http://localhost/CRUD_Keep/public/empresa_form">Saiba mais...</a>
           </div>
           <div class="col-md-5">
@@ -78,7 +81,7 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Para Clientes. <span class="text-muted">Seja associado a empresa que você é cliente.</span></h2>
+            <h2 class="featurette-heading">Para Clientes:<span class="text-muted">Crie o seu registro para ser membro das empresas para conseguir descontos.</span></h2>
             <p class="lead">Clique a baixo para acessar o formulario.</p><a class="btn btn-outline-secondary" href="http://localhost/CRUD_Keep/public/cliente_form">Saiba mais...</a>
           </div>
           <div class="col-md-5 order-md-1">
