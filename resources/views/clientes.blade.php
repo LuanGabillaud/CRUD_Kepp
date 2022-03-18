@@ -28,7 +28,10 @@
                               <td>{{$cliente->telefone}}</td>
                               <td>{{$cliente->email}}</td>
                               <td>{{$cliente->endereco}}</td>
-                              <td>{{'acao'}}</td>
+                              <td class="col-lg-2 text-center">
+                              <a class="btn btn-primary btn-sm" role="button" href="{{route('editar_cliente',$cliente->id)}}">{{'Editar'}}</a>
+                              <a class="btn btn-danger btn-sm" role="button" href="{{route('excluir_cliente',$cliente->id)}}">{{'Excluir'}}</a>
+                              </td>
                           </tr>
                           @endforeach
                         </tbody>

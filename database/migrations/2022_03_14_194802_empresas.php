@@ -14,7 +14,7 @@ class Empresas extends Migration
     public function up()
     {
         Schema::create('empresas', function (Blueprint $table) {
-            $table->integer('id');
+            $table->id();
             $table->string('razao_social');
             $table->string('nome_fantasia');
             $table->string('cnpj');
@@ -22,7 +22,8 @@ class Empresas extends Migration
             $table->string('telefone')->nullable();
             $table->string('endereco')->nullable();
             $table->timestamp('created_at')->nullable();
-            $table->timestamp('update_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
         });
     }
 

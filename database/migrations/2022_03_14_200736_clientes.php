@@ -14,14 +14,15 @@ class Clientes extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->integer('id');
+            $table->id();
             $table->string('nome');
             $table->string('cpf');
             $table->string('email');
             $table->string('telefone')->nullable();
             $table->string('endereco')->nullable();
             $table->timestamp('created_at')->nullable();
-            $table->timestamp('update_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp( 'deleted_at')->nullable();
         });
         
     }

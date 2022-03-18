@@ -32,18 +32,32 @@ class ClienteController extends BaseController
         return view('dashboard');
     }
 
-    public function edit(Request $request)
+    public function edit($id)
     {
-        
+        $cliente = Clientes::where('id', $id)->first();
+
+        return view('editar_cliente', compact('cliente'));
     }
 
     public function update(Request $request)
     {
-        
+        // dados
+        $cliente = Clientes::find($request->id_cliente);
+        $cliente->fill([
+            'cpf'         => $request->cpf,
+            'nome'     => $request->nome,
+            'email'        => $request->email,
+            'telefone'      => $request->telefone,
+            'endereco'     => $request->endereco,
+        ])->save();
+
+        return view('dashboard');
     }
 
-    public function delete(Request $request)
+    public function delete($id)
     {
+        Clientes::where('id',$id)->delete(); 
         
+        return view('dashboard');
     }
 }

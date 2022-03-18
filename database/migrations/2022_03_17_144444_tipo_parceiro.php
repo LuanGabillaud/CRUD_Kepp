@@ -14,10 +14,11 @@ class TipoParceiro extends Migration
     public function up()
     {
         Schema::create('tipo_parceiro', function (Blueprint $table) {
-            $table->integer('id');
+            $table->id();
             $table->string('tipo_parceiro');
             $table->timestamp('created_at')->nullable();
-            $table->timestamp('update_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
         });
         
     }

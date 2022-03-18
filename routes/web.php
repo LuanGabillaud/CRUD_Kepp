@@ -29,6 +29,7 @@ Route::get('/clientes', [ClienteController::class, 'showClientes'])->middleware(
 Route::post('/cliente/cadastrar', [ClienteController::class, 'create'])->middleware(['auth'])->name('cadastrar_cliente');
 Route::post('/cliente/editar', [ClienteController::class, 'edit'])->middleware(['auth'])->name('editar_cliente');
 Route::post('/cliente/atualizar/{id?}', [ClienteController::class, 'update'])->middleware(['auth'])->name('empresa_cliente');
+Route::get('/cliente/excluir/{id?}', [ClienteController::class, 'delete'])->middleware(['auth'])->name('excluir_cliente');
 
 //empresas
 Route::get('/empresas', [EmpresaController::class, 'showEmpresas'])->middleware(['auth'])->name('empresas');
