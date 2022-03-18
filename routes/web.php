@@ -1,7 +1,9 @@
 <?php
 
-use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\EmpresaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,30 +24,27 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-// empresas
-Route::get('/empresas', function () {
-    return view('empresas');
-});
+//clientes
+Route::get('/clientes', [ClienteController::class, 'showClientes'])->middleware(['auth'])->name('clientes');
+Route::post('/cliente/cadastrar', [ClienteController::class, 'create'])->middleware(['auth'])->name('cadastrar_cliente');
+Route::post('/cliente/editar', [ClienteController::class, 'edit'])->middleware(['auth'])->name('editar_cliente');
+Route::post('/cliente/atualizar/{id?}', [ClienteController::class, 'update'])->middleware(['auth'])->name('empresa_cliente');
 
-Route::get('/clientes', function () {
-    return view('clientes');
-});
+//empresas
+Route::get('/empresas', [EmpresaController::class, 'showEmpresas'])->middleware(['auth'])->name('empresas');
+Route::post('/empresa/cadastrar', [EmpresaController::class, 'create'])->middleware(['auth'])->name('cadastrar_empresa');
+Route::get('/empresa/editar/{id}', [EmpresaController::class, 'edit'])->middleware(['auth'])->name('editar_empresa');
+Route::post('/empresa/atualizar/{id?}', [EmpresaController::class, 'update'])->middleware(['auth'])->name('atualizar_empresa');
+Route::get('/empresa/excluir/{id?}', [EmpresaController::class, 'delete'])->middleware(['auth'])->name('excluir_empresa');
 
-Route::get('/home', function (){
-    return view('home');
-});
+Route::get('/cadastrar_empresa', function () {
+    return view('cad_empresa');
+})->middleware(['auth'])->name('cad_empresa');
 
-Route::get('/empresa_form', function(){
-    return view('empresa_form');
-});
+Route::get('/cadastrar_cliente', function () {
+    return view('cad_cliente');
+})->middleware(['auth'])->name('cad_cliente');
 
-Route::get('/cliente_form', function() {
-    return view('cliente_form');
-});
-   
+
 
 require __DIR__.'/auth.php';
-
-
-
-    

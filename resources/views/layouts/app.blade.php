@@ -15,6 +15,15 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
+        <link href="http://localhost/crud/bootstrap/bootstrap-4.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <!--link href="vendor/font-awesome/css/all.min.css" rel="stylesheet"-->
+        <script src="https://kit.fontawesome.com/fd08119723.js" crossorigin="anonymous"></script>
+   
+       <!-- Custom styles for this template -->
+       <link href="http://localhost/bootstrap/bootstrap-4.1.3/site/docs/4.1/examples/carousel/carousel.css" rel="stylesheet">
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -31,6 +40,7 @@
             <main>
                 {{ $slot }}
             </main>
+          @include('layouts.footer')
         </div>
     </body>
 </html>

@@ -9,16 +9,8 @@ class Empresas extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'id';
     protected $table = 'empresas';
-
-    protected $fillable = [
-        'razao_social',
-        'nome_fantasia',
-        'cnpj',
-        'email',
-        'telefone',
-        'endereço',
-    ];
     
+    protected $fillable = [ 'razao_social', 'nome_fantasia', 'cnpj', 'email', 'telefone', 'endereco'];
+
 }

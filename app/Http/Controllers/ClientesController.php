@@ -1,35 +1,39 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ClientesController;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-use App\Models\Empresas;
 use App\Models\Clientes;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function showEmpresas()
-    {
-        $empresas = Empresas::get();
-        return view('empresa', compact('empresas'));
-    }
-
     public function showClientes()
     {
-        return view('cliente');
+        $clientes = Clientes::get();
+        return view('clientes', compact('clientes'));
     }
 
-    public function cadEmpresa(Request $request)
+    public function create(Request $request)
     {
         
     }
 
-    public function cadCliente(Request $request)
+    public function edit(Request $request)
+    {
+        
+    }
+
+    public function update(Request $request)
+    {
+        
+    }
+
+    public function delete(Request $request)
     {
         
     }
